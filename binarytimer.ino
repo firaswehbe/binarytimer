@@ -1,4 +1,5 @@
-// Example 01 : Blinking LED
+// I only can go up to 63 since the kit
+// I got only had 6 LEDs
 const int LED1 = 1; // LED connected to
 const int LED2 = 2; // LED connected to
 const int LED3 = 3; // LED connected to
@@ -22,6 +23,7 @@ void setup()
 void loop()
 {
   i=i+1;
+  // When you reach 64*3 seconds, start flashing slowly
   if (i>64) {
     i=63;
   }
@@ -62,7 +64,7 @@ void loop()
     digitalWrite(LED1, LOW);
   }
   
-  delay(3000);             // waits for a second
+  delay(3000);             // waits for 3 seconds
 }
 
 
