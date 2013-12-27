@@ -7,6 +7,7 @@ const int LED4 = 4; // LED connected to
 const int LED5 = 5; // LED connected to
 const int LED6 = 6; // LED connected to
 int i;
+int delaylength;
 
 void setup()
 {
@@ -19,6 +20,7 @@ void setup()
   pinMode(LED5, OUTPUT);
   pinMode(LED6, OUTPUT);
   i=0;
+  delaylength=3000;
 }
 void loop()
 {
@@ -26,6 +28,7 @@ void loop()
   // When you reach 64*3 seconds, start flashing slowly
   if (i>64) {
     i=63;
+    delaylength=500;
   }
   
   if (i&32) {
@@ -64,7 +67,7 @@ void loop()
     digitalWrite(LED1, LOW);
   }
   
-  delay(3000);             // waits for 3 seconds
+  delay(delaylength);             // waits for 3 seconds
 }
 
 
